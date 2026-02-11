@@ -9,19 +9,38 @@
 <body class="bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-gray-900">
 
     <header class="bg-gray-200 rounded-full p-4 mb-10">
-        <nav class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-extrabold "> Saliou Gueye</h1>
-            <ul class="hidden md:flex space-x-6 font-bold">
-      <li><a href="#accueil.html">Accueil</a></li>
-      <li><a href="#apropos.html">À propos</a></li>
-      <li><a href="#formation.html">Formation</a></li>
-      <li><a href="#competences.html">Compétences</a></li>
-      <li><a href="#experiences.html">experience</a></li>
-      <li><a href="#projets.html">Projets</a></li>
-      <li><a href="#contact.html">Contact</a></li>
+  <nav class="container mx-auto flex justify-between items-center">
+    
+    <h1 class="text-xl font-extrabold">Saliou Gueye</h1>
+
+    <!-- Menu -->
+    <ul id="menu" class="hidden md:flex space-x-6 font-bold">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#formation">Formation</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#experiences">Expérience</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-        </nav>
-    </header class>
+
+    <!-- Bouton Hamburger (visible seulement sur mobile) -->
+    <button id="menu-btn" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
     <section id="accueil.html" class="text-center py-20 ">
         <h2 class="text-4xl md:text-6xl font-extrabold mb-6"> Etudiant en Génie Informatique</h2>
         <p class="font-bold "> Bienvenue dans mon portfolio</p>
